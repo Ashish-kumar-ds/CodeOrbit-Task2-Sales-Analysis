@@ -1,21 +1,55 @@
-# Sales Data Analysis – Short Report
+# Sales Data Analysis – Task 2 Report
 
 ## Project objective
-The objective is to clean sales records and summarize sales performance using Python, pandas, and matplotlib.
+Clean a sales dataset and summarize sales performance by product and region using Python, pandas, and matplotlib.
 
-## Dataset
-This repository contains a small illustrative sample of 12 sales rows. It is provided to demonstrate the workflow and is not represented as an official CodeOrbit dataset.
+## Dataset note
+The repository's CSV contains 12 illustrative sample sales records. It is not represented as an official dataset supplied by CodeOrbit Tech. Replace it with the official dataset if the internship instructions provided one.
 
 ## Methodology
-1. Read the CSV file with pandas.
-2. Remove duplicate records and invalid rows.
-3. Convert dates and numeric columns to appropriate data types.
+1. Load the CSV with pandas.
+2. Check for duplicate rows and convert dates and numeric fields.
+3. Remove invalid rows and records with non-positive quantities or negative unit prices.
 4. Recalculate revenue as Quantity × Unit_Price.
-5. Calculate total orders, units sold, total revenue, average revenue per order, and revenue by product and region.
-6. Save cleaned data and a product-revenue chart.
+5. Summarize orders, units, revenue per product, and revenue per region.
+6. Export the cleaned dataset and create a product-revenue chart.
 
-## How to report findings
-Run `python sales_analysis.py`. Use the exact values printed by the script in the final report, and include the generated `revenue_by_product.png` chart if required by the task instructions.
+## Results from the current sample dataset
+- Rows before cleaning: 12
+- Rows after cleaning: 12
+- Exact duplicate rows removed: 0
+- Unique orders: 12
+- Units sold: 34
+- Total revenue: Rs. 309,300.00
+- Average revenue per order: Rs. 25,775.00
+
+### Revenue by product
+| Product | Revenue (Rs.) |
+|---|---:|
+| Laptop | 220,000 |
+| Monitor | 60,000 |
+| Headphones | 14,000 |
+| Mouse | 7,800 |
+| Keyboard | 7,500 |
+
+### Revenue by region
+| Region | Revenue (Rs.) |
+|---|---:|
+| North | 130,000 |
+| East | 65,500 |
+| South | 61,000 |
+| West | 52,800 |
+
+## Files
+- `sales_dataset.csv` — original illustrative sample dataset.
+- `sales_analysis.py` — analysis and cleaning script.
+- `sales_analysis_output.csv` — cleaned output generated from the current sample data.
+- `revenue_by_product.svg` — chart of revenue by product.
+- `requirements.txt` — required Python libraries.
+- `short_report.md` — this report.
+
+## How to reproduce
+Install dependencies with `pip install -r requirements.txt`, then run `python sales_analysis.py`. The script generates `sales_analysis_output.csv` and `revenue_by_product.png` in the project folder.
 
 ## Conclusion
-This workflow demonstrates basic data cleaning, aggregation, and visualization. For final internship submission, verify the required deliverables and use the official dataset if one was supplied.
+This sample run demonstrates basic data validation, cleaning, aggregation, and visualization. Before final internship submission, confirm whether CodeOrbit required a specific dataset and replace the sample dataset if needed. Re-run the script and update these findings if the data changes.
